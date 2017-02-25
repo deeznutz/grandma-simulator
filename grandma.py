@@ -1,5 +1,6 @@
 from flask import Flask, request, redirect
 import twilio.twiml
+import random
 
 app = Flask(__name__)
 
@@ -40,11 +41,11 @@ RESPONSES = [
 def hello_monkey():
     """Respond and greet the caller by name."""
 
-    from_number = request.values.get('From', None)
-    if from_number in callers:
-        message = callers[from_number] + ", thanks for the message!"
+    from_body = request.values.get('Body', None).lower()
+    if from_body == 'hi grandma':
+        message = 'ayyy'
     else:
-        message = "Monkey, thanks for the message!"
+        message = random.choice(QUESTIONS + RESPONSES)
 
     resp = twilio.twiml.Response()
     resp.message(message)
