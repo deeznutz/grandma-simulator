@@ -10,6 +10,32 @@ callers = {
     "+14158675311": "Virgil",
 }
 
+WEATHER = [
+    'Are you wearing a jacket?',
+    'Sweetie, it\'s so chilly',
+    'Do you need an umbrella?',
+    'Are you wearing a hat?',
+]
+
+QUESTIONS = [
+    'Do you have a girlfriend/boyfriend?',
+    'Are you eating enough?',
+    'Do you have a job yet?',
+    'Where do you live again?',
+    'Do you have any friends?',
+    'Sweetie, what do you think of the fall of American democracy?',
+    'When are you going to graduate?',
+    'Are you coming to the church potluck on Saturday?',
+]
+
+RESPONSES = [
+    'That\'s so nice',
+    'You should call more',
+    'That\'s nice dear',
+    'Next time you visit we can make pies together',
+    'You look so frail all the time',
+]
+
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
     """Respond and greet the caller by name."""
